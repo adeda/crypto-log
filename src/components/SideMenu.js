@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import styles from './SideMenu.style';
@@ -24,24 +18,21 @@ class SideMenu extends Component {
         <ScrollView>
           <View>
             <View style={styles.navSectionStyle}>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Page1')}>
-              Page1
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('CryptocurrencyList')}>
+              CryptocurrencyList
               </Text>
             </View>
           </View>
           <View>
             <View style={styles.navSectionStyle}>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Page2')}>
-                Page2
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Page3')}>
-                Page3
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Settings')}>
+                Settings
               </Text>
             </View>
           </View>
         </ScrollView>
         <View style={styles.footerContainer}>
-          <Text>This is my fixed footer</Text>
+          <Text>@adeda</Text>
         </View>
       </View>
     );

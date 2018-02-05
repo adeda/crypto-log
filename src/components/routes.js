@@ -1,18 +1,14 @@
-import Page1 from './Page1';
-import Page2 from './Page2';
-import Page3 from './Page3';
+import CryptocurrencyList from './CryptocurrencyList';
+import Settings from './Settings';
 import SideMenu from './SideMenu';
 import { DrawerNavigator } from 'react-navigation';
 
 export default DrawerNavigator({
-  Page1: {
-    screen: Page1
+  CryptocurrencyList: {
+    screen: CryptocurrencyList
   },
-  Page2: {
-    screen: Page2
-  },
-  Page3: {
-    screen: Page3
+  Settings: {
+    screen: Settings
   }
 }, {
   contentComponent: SideMenu,
