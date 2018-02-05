@@ -1,12 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StatusBar, View, Text, StyleSheet } from 'react-native';
+import Toolbar from './toolbar/Toolbar';
+import { getColor } from './toolbar/helpers';
 
 const Header = () => {
     return (
         <View style={headerContainer}>
-            <Text style={header}>
-                Cryptocurrency App
-            </Text>
+        <StatusBar
+          backgroundColor="#16a085"
+          animated={true}
+        />
+        <Toolbar  title="Cryptocurrency Tracker" color={getColor("#1abc9c")} />
+
         </View>
     )
 }
@@ -15,8 +20,8 @@ const Header = () => {
 const styles = StyleSheet.create({
     headerContainer: {
         display: "flex",
-        marginTop: 55,
-        alignItems: "center",
+        marginTop: 24,
+
     },
     header: {
         fontWeight: "bold",

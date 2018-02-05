@@ -3,19 +3,21 @@ import { connect } from 'react-redux';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 
-import FetchCryptoData from './../Actions/FetchCryptoData';
+import FetchCoinData from './../Actions/FetchCryptoData';
 import Cryptocurrency from './Cryptocurrency';
 
 class CryptocurrencyList extends Component {
 
     componentWillMount() {
-        this.props.FetchCryptoData();
+        this.props.FetchCoinData();
     }
 
     renderCoinCards() {
         const { crypto } = this.props;
         return crypto.data.map((coin) =>
             <Cryptocurrency
+                id={coin.id}
+                rank={coin.rank}
                 key={coin.name}
                 coin_name={coin.name}
                 symbol={coin.symbol}
@@ -68,4 +70,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, { FetchCryptoData })(CryptocurrencyList)
+export default connect(mapStateToProps, { FetchCoinData })(CryptocurrencyList)

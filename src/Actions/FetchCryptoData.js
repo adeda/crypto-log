@@ -7,13 +7,14 @@ import {
 } from './../Utils/ActionTypes';
 
 
-export default function FetchCryptoData() {
+export default function FetchCoinData() {
     return dispatch => {
 
         dispatch({ type: FETCHING_COIN_DATA })
 
-        return axios.get(`${apiBaseURL}/v1/ticker/?limit=10`)
+        return axios.get(`${apiBaseURL}/v1/ticker/?limit=100`)
             .then(res => {
+              console.log(res.data);
                 return dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: res.data });
             })
             .catch(err => {
