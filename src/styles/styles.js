@@ -69,6 +69,30 @@ const styles = StyleSheet.create({
     innerContainer: {
       alignItems: 'center',
     },
+    toolbar: {
+      height: 56,
+      justifyContent: 'center'
+    },
+    title: {
+      marginLeft: 16,
+      color: 'white'
+    },
+    settings: {
+      right: -340,
+      color: 'white'
+    },
+    headerContainer: {
+        display: "flex",
+        marginTop: 24,
+    },
+    header: {
+        fontWeight: "bold",
+        fontSize: 20,
+    },
+    contentContainer: {
+        paddingBottom: 100,
+        paddingTop: 55
+    }
 })
 
 export default styles;

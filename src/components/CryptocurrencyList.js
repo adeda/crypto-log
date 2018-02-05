@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
-
 import FetchCoinData from './../Actions/FetchCryptoData';
 import Cryptocurrency from './Cryptocurrency';
+import styles from './../styles/styles';
 
 class CryptocurrencyList extends Component {
 
@@ -27,7 +27,6 @@ class CryptocurrencyList extends Component {
             />
         )
     }
-
 
     render() {
 
@@ -52,15 +51,6 @@ class CryptocurrencyList extends Component {
                 {this.renderCoinCards()}
             </ScrollView>
         )
-
-
-    }
-}
-
-const styles = {
-    contentContainer: {
-        paddingBottom: 100,
-        paddingTop: 55
     }
 }
 

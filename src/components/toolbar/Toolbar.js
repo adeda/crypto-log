@@ -1,6 +1,3 @@
-//
-// Toolbar Component
-//
 import React, { Component } from 'react'
 import {
   View,
@@ -9,33 +6,24 @@ import {
   StyleSheet
 } from 'react-native'
 
-import { Typo } from './Typography'
-import { getColor } from './helpers'
+import { Typo } from './Typography';
+import { getColor } from './helpers';
+import styles from './../../styles/styles';
 
 export default class Toolbar extends Component {
   render() {
-    const {
-      color,
-      title
-    } = this.props
+    
+    const { color, title, toolbar } = styles;
 
     return (
         <View style={[ styles.toolbar, { backgroundColor: getColor(color) } ]}>
           <Text style={[ styles.title, Typo.toolbarTitle ]} >
-            {title.toUpperCase()}
+            Criptocurrency Tracer
+          </Text>
+          <Text style={[ styles.settings]} >
+            Settings
           </Text>
         </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  toolbar: {
-    height: 56,
-    justifyContent: 'center'
-  },
-  title: {
-    marginLeft: 16,
-    color: 'white'
-  }
-})
