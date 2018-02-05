@@ -92,7 +92,34 @@ const styles = StyleSheet.create({
     contentContainer: {
         paddingBottom: 100,
         paddingTop: 55
-    }
+    },
+
+
+
+  welcome: {
+   fontSize: 20,
+   textAlign: 'center',
+   marginTop: 20,
+   marginBottom: 20,
+ },
+ instructions: {
+   textAlign: 'center',
+   color: '#333333',
+   marginBottom: 5,
+ },
+ component: {
+   paddingTop: 20,
+   alignItems: 'center',
+   marginBottom: 50,
+ },
+ radioStyle: {
+   borderRightWidth: 1,
+   borderColor: '#2196f3',
+   paddingRight: 10
+ },
+ radioButtonWrap: {
+   marginRight: 5
+ },
 })
 
 export default styles;
